@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+		<audio id="music1" src="audio/Aimer - bL∞dy f8.mp3" controls="controls" loop="false" hidden="true"></audio>
+        <style type="text/css">
+            #phonograph{
+                position:absolute;
+                width:200px;
+                height:200px;
+                background:blue;
+            }
+			#disc1{
+                position:absolute;
+				left: 20px;
+				top: 300px;
+                width:50px;
+                height:50px;
+                background:yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id = "phonograph">put music here</div>
+		<div id = "disc1">the music</div>
+    </body>
+	<script>
+		var isDown = false;
+        var m_move_x,m_move_y,m_down_x,m_down_y,dx,dy,md_x,md_y,ndx,ndy;
+		var disc1 = document.getElementById("disc1");
+		var music1 = document.getElementById("music1");
+		disc1.onmousedown = function(ev){
+			isDown = true;
+			music1.pause();
+    		m_down_x = event.pageX;
+			m_down_y = event.pageY;
+
+			dx = disc1.offsetLeft;
+			dy = disc1.offsetTop;
+
+        
+			md_x = m_down_x - dx;
+			md_y = m_down_y - dy;
+		}
+		
+		document.onmousemove = function(ev){
+			
+        	dx = disc1.offsetLeft;
+        	dy = disc1.offsetTop;
+
+			m_move_x = event.pageX;
+			m_move_y = event.pageY;
+
+        	if(isDown){
+
+				ndx = m_move_x - md_x;
+				ndy = m_move_y - md_y;
+
+				disc1.style.left = ndx+"px";
+				disc1.style.top = ndy+"px";
+
+			}
+		}
+		
+		document.onmouseup = function(ev){
+			isDown = false;
+			if(disc1.offsetLeft < 200 && disc1.offsetTop < 200){
+				console.log("ha");
+				music1.play();
+			}
+		}
+	</script>
+</html>
+
