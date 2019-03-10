@@ -6,21 +6,29 @@
 	<h1>Music Mixer</h1>
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
 </head>
+<div class="container">
 <body id="mainBody">
     <section id="topBar">
         <h2 class="hidden">topBar</h2>
         <p>let's listening some music!</p>
+        <audio id="musicController" src="audio/Aimer - bL∞dy f8.mp3" controls="controls" loop="false"></audio>
 	</section><!--end topBar-->
 
     <div id="part1">
-        <img src="images/bairong_sheng_musicmixer_part2.png" alt="img1">
+      <div id="part11">
+        <img src="images/bairong_sheng_musicmixer_part2.jpg" alt="img1">
+      </div>
+      <div id="part22">
+        <img src="images/bairong_sheng_musicmixer_part1.jpg" alt="img2">
+      </div>
     </div>
 	<nav id="mainNav">
                 <h2 class="hidden">mainNav</h2>
                 <ul>
-                    <li><a href="index.html">Game1</a></li>
-                    <li><a href="contact.html">Game2</a></li>
-                    <li><a href="about.html">Feedback</a></li>
+                    <li><a onclick = "clicked(this)">Music1</a></li>
+                    <li><a onclick = "clicked(this)">Music2</a></li>
+                    <li><a onclick = "clicked(this)">Music3</a></li>
+                    <li><a onclick = "clicked(this)">Music4</a></li>
                 </ul>
             </nav><!--end mainNav-->
 

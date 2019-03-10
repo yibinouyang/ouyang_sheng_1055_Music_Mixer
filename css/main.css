@@ -4,34 +4,39 @@
 
 }
 
-#mainNav
-{
-	width: 500px;
-	height: 25px;
-	margin-top: 20px;
-	margin-left: auto;
-	/*background-color: red;*/
-}
-
 #mainNav ul
 {
-	list-style-type: none;
-	padding: 5px;
+  list-style-type: none;
+  padding: 15px;
+  padding-left: 220px;
 }
 
 #mainNav ul li
 {
-	display: inline;
-	font-size: 8px;
-	margin-left: 30px;
+  display: inline;
+  font-size: 20px;
+  margin-left: 100px;
 }
 
 #mainNav ul li a
 {
-	color: #ead726;
-	padding: 5px;
-	background-color: #4378a8;
-	font-size: 18px;
+  font-family: 'Indie Flower', cursive;
+  color: #fbffca;
+  padding: 13px;
+  background-color: #6bb270;
+  font-size: 30px;
+}
+
+
+#mainNav ul li a:hover{
+  background: rgb(226,29,22);
+  background: -moz-linear-gradient(top, rgba(226,29,22,1) 0%, rgba(170,8,3,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,29,22,1)), color-stop(100%,rgba(170,8,3,1)));
+  background: -webkit-linear-gradient(top, rgba(226,29,22,1) 0%,rgba(170,8,3,1) 100%);
+  background: -o-linear-gradient(top, rgba(226,29,22,1) 0%,rgba(170,8,3,1) 100%);
+  background: -ms-linear-gradient(top, rgba(226,29,22,1) 0%,rgba(170,8,3,1) 100%);
+  background: linear-gradient(to bottom, rgba(226,29,22,1) 0%,rgba(170,8,3,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ff766', endColorstr='#7ff766',GradientType=0 );
 }
 
 .hidden
@@ -43,6 +48,29 @@
 	background-color: grey;
 }
 
+#part1{
+  display: flex;
+  flex-direction: row;
+    justify-content: space-between;
+  border-bottom: solid 1px #DDD;
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
+
+#part11 img{
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
+  padding-left: 450px;
+
+
+}
+#part22 img{
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
+  padding-right: 500px;
+}
 .sky {
   height: 480px;
   background: #007fd5;
@@ -231,4 +259,21 @@
 	width: 200px;
 	height: 200px;
 
+}
+
+.box {
+  background-color: #8ea86e;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 100px;
+}
+.box3{
+  order:-1;/*will place at start*/
+}
+
+.box2{
+  order:1;
 }
