@@ -2,46 +2,48 @@
 <html lang="en">
 <html>
 <head>
+  <div class="container">
 	<title>Music Mixer</title>
-	<h1>Music Mixer</h1>
+	<h1 class="hidden">Music Mixer</h1>
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
-<div class="container">
-<body id="mainBody">
-    <section id="topBar">
+<section id="topBar">
         <h2 class="hidden">topBar</h2>
-        <p>let's listening some music!</p>
-        <audio id="musicController" src="audio/Aimer - bL∞dy f8.mp3" controls="controls" loop="false"></audio>
+        <p>Let's Play Some MusicGame！</p>
+<body id="mainBody">
 	</section><!--end topBar-->
 
-    <div id="part1">
-      <div id="part11">
-        <img src="images/bairong_sheng_musicmixer_part2.jpg" alt="img1">
-      </div>
-      <div id="part22">
-        <img src="images/bairong_sheng_musicmixer_part1.jpg" alt="img2">
-      </div>
-    </div>
-	<nav id="mainNav">
-                <h2 class="hidden">mainNav</h2>
-                <ul>
-                    <li><a onclick = "clicked(this)">Music1</a></li>
-                    <li><a onclick = "clicked(this)">Music2</a></li>
-                    <li><a onclick = "clicked(this)">Music3</a></li>
-                    <li><a onclick = "clicked(this)">Music4</a></li>
-                </ul>
-            </nav><!--end mainNav-->
+  <div id="topic">
+    <p>Drag the icon on the left to the right to play music</p>
+  </div>
 
-             <div class="sky">
-  <div class="clouds_one"></div>
-  <div class="clouds_two"></div>
-  <div class="clouds_three"></div>
+  <div id="twodiv">
+	<audio class="audioController" src="audio/music1.wav" loop="true"></audio>
+	<audio class="audioController" src="audio/music2.wav" loop="true"></audio>
+	<audio class="audioController" src="audio/music3.wav" loop="true"></audio>
+	<audio class="audioController" src="audio/music4.wav" loop="true"></audio>
+    <div id="space" ondrop="dropForSpace1(event)" ondragover="allowDrop(event)">
+      <img id="rap1" src="images/rap1.jpg" alt="rap1" draggable="true" ondragstart="drag(event)" data-mindex=0>
+      <img id="rap2" src="images/rap2.jpg" alt="rap2" draggable="true" ondragstart="drag(event)" data-mindex=1>
+      <img id="rap3" src="images/rap3.jpg" alt="rap3" draggable="true" ondragstart="drag(event)" data-mindex=2> 
+      <img id="rap4" src="images/rap4.jpg" alt="rap4" draggable="true" ondragstart="drag(event)" data-mindex=3>
+    </div>
+
+    <div id="space2">
+      <div class="place1" ondrop="dropForSpace2(event)" ondragover="allowDrop(event)" data-allow-drop=true></div>
+      <div class="place2" ondrop="dropForSpace2(event)" ondragover="allowDrop(event)" data-allow-drop=true></div>
+      <div class="place3" ondrop="dropForSpace2(event)" ondragover="allowDrop(event)" data-allow-drop=true></div>
+      <div class="place4" ondrop="dropForSpace2(event)" ondragover="allowDrop(event)" data-allow-drop=true></div>
+      
+
+    </div>
   </div>
             <script src="js/main.js"></script>
 
     <footer id="mainFooter">
         
     </footer>
-
 </body>
 </html>

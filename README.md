@@ -1,3 +1,2 @@
 #MusicMixer
-This is our MusicMixer assignment，I am very interested in pop music, so in this project I am going to add some elements of pop music. We will try to make it beautiful and meaningful, so that he does not seem to be just a homework but a well-planned web page that can bring music joy to people.
-And I plan to add some interesting game into our website.
+Regarding this Project, I selected four  elements in the B-box, one picture for one audio. When you drag an icon on the left side of the page to the grid on the right, it plays the audio bundled with it. The full audio is played when all four pictures are placed in the grid. This page is done by dragging and dropping images and using javascript to control the audio. I chose some audio that was put together and not so conflicting to complete the job in order to avoid the four audios playing together too messy.
